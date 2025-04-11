@@ -1,5 +1,5 @@
 #!/bin/bash
-cat ./list.txt | while read host_ip
+cat /nfs-shared/list.txt | while read host_ip
 do
   ping -c 1 -W 1 "$host_ip" > /dev/null
   if [ $? -eq 0 ]; then
